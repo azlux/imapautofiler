@@ -9,7 +9,7 @@ RUN apt update && \
     pip install --no-cache-dir setuptools wheel twine build 
 
 WORKDIR /app
-COPY .. imapautofiler/
+COPY . imapautofiler/
 
 RUN pip install --no-cache-dir ./imapautofiler && \
     rm -rf ./imapautofiler/.git ./imapautofiler/.github ./imapautofiler/doc
